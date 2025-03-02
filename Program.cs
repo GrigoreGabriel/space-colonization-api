@@ -1,14 +1,27 @@
 using Microsoft.EntityFrameworkCore;
 using space_colonization_api.Data;
+using space_colonization_api.Repositories.Planets;
+using System.Net.NetworkInformation;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "space_colonization_api", Version = "v1" });
+});
+builder.Services.AddMediatR(cfg =>
+     cfg.RegisterServicesFromAssembly(typeof(Ping).Assembly));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+{
+    builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assembly));
+}
+builder.Services.AddScoped<IPlanetRepository, PlanetRepository>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularOrigins",

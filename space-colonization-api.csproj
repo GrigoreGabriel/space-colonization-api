@@ -24,8 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Business\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Business\Planets\Commands\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 
