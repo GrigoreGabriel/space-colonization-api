@@ -1,4 +1,6 @@
-﻿using space_colonization_api.Business.Planets.Responses;
+﻿using Microsoft.AspNetCore.Mvc;
+using space_colonization_api.Business.Planets.Commands;
+using space_colonization_api.Business.Planets.Responses;
 
 namespace space_colonization_api.Repositories.Planets
 {
@@ -6,5 +8,6 @@ namespace space_colonization_api.Repositories.Planets
     {
         public Task<IReadOnlyList<GetPlanetsResponse>> GetAll(CancellationToken cancellationToken);
 
+        public Task<IActionResult> UpdatePlanetDetails(UpdatePlanetDetailsCommand command, CancellationToken cancellationToken);
     }
 }

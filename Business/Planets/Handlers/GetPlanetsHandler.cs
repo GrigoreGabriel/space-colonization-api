@@ -5,7 +5,7 @@ using space_colonization_api.Repositories.Planets;
 
 namespace space_colonization_api.Business.Planets.Handlers
 {
-    public class GetPlanetsHandler : IRequestHandler<GetPlanetsQuery, IReadOnlyList<GetPlanetsResponse>>
+    public record GetPlanetsHandler : IRequestHandler<GetPlanetsQuery, IReadOnlyList<GetPlanetsResponse>>
     {
         public readonly IPlanetRepository _planetRepository;
 

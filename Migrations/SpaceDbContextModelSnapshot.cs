@@ -81,7 +81,7 @@ namespace space_colonization_api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("ImagePath")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -126,7 +126,7 @@ namespace space_colonization_api.Migrations
 
                     b.HasIndex("RobotId");
 
-                    b.ToTable("RobotTeam");
+                    b.ToTable("RobotTeams");
                 });
 
             modelBuilder.Entity("space_colonization_api.Data.Robots.Robot", b =>

@@ -99,7 +99,7 @@ namespace space_colonization_api.Migrations
                     PlanetId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RobotsOnSite = table.Column<int>(type: "int", nullable: false),
                     IsExplored = table.Column<bool>(type: "bit", nullable: false),
@@ -146,7 +146,7 @@ namespace space_colonization_api.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "RobotTeam",
+                name: "RobotTeams",
                 columns: table => new
                 {
                     TeamId = table.Column<int>(type: "int", nullable: false),
@@ -155,21 +155,21 @@ namespace space_colonization_api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RobotTeam", x => new { x.TeamId, x.RobotId, x.ExpeditionId });
+                    table.PrimaryKey("PK_RobotTeams", x => new { x.TeamId, x.RobotId, x.ExpeditionId });
                     table.ForeignKey(
-                        name: "FK_RobotTeam_Expeditions_ExpeditionId",
+                        name: "FK_RobotTeams_Expeditions_ExpeditionId",
                         column: x => x.ExpeditionId,
                         principalTable: "Expeditions",
                         principalColumn: "ExpeditionId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_RobotTeam_Robots_RobotId",
+                        name: "FK_RobotTeams_Robots_RobotId",
                         column: x => x.RobotId,
                         principalTable: "Robots",
                         principalColumn: "RobotId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_RobotTeam_Teams_TeamId",
+                        name: "FK_RobotTeams_Teams_TeamId",
                         column: x => x.TeamId,
                         principalTable: "Teams",
                         principalColumn: "TeamId",
@@ -203,13 +203,13 @@ namespace space_colonization_api.Migrations
                 column: "StatusId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RobotTeam_ExpeditionId",
-                table: "RobotTeam",
+                name: "IX_RobotTeams_ExpeditionId",
+                table: "RobotTeams",
                 column: "ExpeditionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RobotTeam_RobotId",
-                table: "RobotTeam",
+                name: "IX_RobotTeams_RobotId",
+                table: "RobotTeams",
                 column: "RobotId");
 
             migrationBuilder.CreateIndex(
@@ -228,7 +228,7 @@ namespace space_colonization_api.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "RobotTeam");
+                name: "RobotTeams");
 
             migrationBuilder.DropTable(
                 name: "Expeditions");

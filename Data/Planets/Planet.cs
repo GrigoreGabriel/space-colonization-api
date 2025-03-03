@@ -7,7 +7,7 @@ namespace space_colonization_api.Data.Planets
     {
         public int PlanetId { get; set; }
         public string Name { get; set; } = string.Empty;
-        public string Image { get; set; } = string.Empty;
+        public string ImagePath { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public int RobotsOnSite { get; set; }
         public bool IsExplored { get; set; }
