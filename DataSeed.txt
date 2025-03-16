@@ -1,0 +1,190 @@
+USE [SpaceColonization]
+GO
+SET IDENTITY_INSERT [dbo].[Captains] ON 
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (1, N'Andrada Mihaela')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (2, N'Ion Popescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (3, N'Elena Ionescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (4, N'Mihai Dumitrescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (5, N'Gabriel Stoica')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (6, N'Anca Georgescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (7, N'Radu Marinescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (8, N'Catalina Voinea')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (9, N'Florin Radulescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (10, N'Simona Mure?an')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (11, N'Andrada Mihaela')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (12, N'Ion Popescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (13, N'Elena Ionescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (14, N'Mihai Dumitrescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (15, N'Gabriel Stoica')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (16, N'Anca Georgescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (17, N'Radu Marinescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (18, N'Catalina Voinea')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (19, N'Florin Radulescu')
+GO
+INSERT [dbo].[Captains] ([CaptainId], [Name]) VALUES (20, N'Simona Mure?an')
+GO
+SET IDENTITY_INSERT [dbo].[Captains] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Shuttles] ON 
+GO
+INSERT [dbo].[Shuttles] ([ShuttleId], [Name], [Capacity]) VALUES (1, N'OrionX', 6)
+GO
+INSERT [dbo].[Shuttles] ([ShuttleId], [Name], [Capacity]) VALUES (2, N'LunarWave', 8)
+GO
+INSERT [dbo].[Shuttles] ([ShuttleId], [Name], [Capacity]) VALUES (3, N'CosmoRunner', 10)
+GO
+INSERT [dbo].[Shuttles] ([ShuttleId], [Name], [Capacity]) VALUES (4, N'NovaStrider', 7)
+GO
+INSERT [dbo].[Shuttles] ([ShuttleId], [Name], [Capacity]) VALUES (5, N'Galaxion', 5)
+GO
+INSERT [dbo].[Shuttles] ([ShuttleId], [Name], [Capacity]) VALUES (6, N'AstroHawk', 9)
+GO
+INSERT [dbo].[Shuttles] ([ShuttleId], [Name], [Capacity]) VALUES (7, N'StarRider', 4)
+GO
+INSERT [dbo].[Shuttles] ([ShuttleId], [Name], [Capacity]) VALUES (8, N'CelestiCruiser', 6)
+GO
+INSERT [dbo].[Shuttles] ([ShuttleId], [Name], [Capacity]) VALUES (9, N'NebulaDrift', 8)
+GO
+SET IDENTITY_INSERT [dbo].[Shuttles] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Teams] ON 
+GO
+INSERT [dbo].[Teams] ([TeamId], [CaptainId], [ShuttleId]) VALUES (1, 1, 1)
+GO
+INSERT [dbo].[Teams] ([TeamId], [CaptainId], [ShuttleId]) VALUES (2, 2, 3)
+GO
+INSERT [dbo].[Teams] ([TeamId], [CaptainId], [ShuttleId]) VALUES (3, 3, 2)
+GO
+INSERT [dbo].[Teams] ([TeamId], [CaptainId], [ShuttleId]) VALUES (4, 4, 5)
+GO
+INSERT [dbo].[Teams] ([TeamId], [CaptainId], [ShuttleId]) VALUES (5, 7, 4)
+GO
+SET IDENTITY_INSERT [dbo].[Teams] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Robots] ON 
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (1, N'Robo1')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (2, N'MechaBot')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (3, N'CyberX')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (4, N'AutoDroid')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (5, N'NanoTech')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (6, N'SteelGuard')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (7, N'QuantumMech')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (8, N'HyperBot')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (9, N'AeroDroid')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (10, N'NeuroBot')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (11, N'TitanX')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (12, N'GigaRobo')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (13, N'CyberNova')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (14, N'OmegaDroid')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (15, N'ProtoMech')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (16, N'NanoSentinel')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (17, N'MechaGuardian')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (18, N'XenoBot')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (19, N'NeonX')
+GO
+INSERT [dbo].[Robots] ([RobotId], [Name]) VALUES (20, N'FusionDroid')
+GO
+SET IDENTITY_INSERT [dbo].[Robots] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Statuses] ON 
+GO
+INSERT [dbo].[Statuses] ([StatusId], [Name]) VALUES (1, N'OK')
+GO
+INSERT [dbo].[Statuses] ([StatusId], [Name]) VALUES (2, N'!OK')
+GO
+INSERT [dbo].[Statuses] ([StatusId], [Name]) VALUES (3, N'!TODO')
+GO
+INSERT [dbo].[Statuses] ([StatusId], [Name]) VALUES (4, N'!En route')
+GO
+SET IDENTITY_INSERT [dbo].[Statuses] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Planets] ON 
+GO
+INSERT [dbo].[Planets] ([PlanetId], [Name], [ImagePath], [Description], [RobotsOnSite], [IsExplored], [IsLifeSuitable], [StatusId]) VALUES (1009, N'Quartzara', N'assets/images/planet1.png', N'TEST', 3, 1, 1, 3)
+GO
+INSERT [dbo].[Planets] ([PlanetId], [Name], [ImagePath], [Description], [RobotsOnSite], [IsExplored], [IsLifeSuitable], [StatusId]) VALUES (1010, N'Amethyst Prime', N'assets/images/planet2.png', N'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2, 1, 0, 3)
+GO
+INSERT [dbo].[Planets] ([PlanetId], [Name], [ImagePath], [Description], [RobotsOnSite], [IsExplored], [IsLifeSuitable], [StatusId]) VALUES (1011, N'Sapphire Haven', N'assets/images/planet3.png', N'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 5, 1, 1, 1)
+GO
+INSERT [dbo].[Planets] ([PlanetId], [Name], [ImagePath], [Description], [RobotsOnSite], [IsExplored], [IsLifeSuitable], [StatusId]) VALUES (1012, N'Onyx Terra', N'assets/images/planet4.png', N'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 1, 1, 0, 4)
+GO
+INSERT [dbo].[Planets] ([PlanetId], [Name], [ImagePath], [Description], [RobotsOnSite], [IsExplored], [IsLifeSuitable], [StatusId]) VALUES (1013, N'Ruby Ember', N'assets/images/planet5.png', N'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4, 1, 0, 2)
+GO
+INSERT [dbo].[Planets] ([PlanetId], [Name], [ImagePath], [Description], [RobotsOnSite], [IsExplored], [IsLifeSuitable], [StatusId]) VALUES (1014, N'Opal Drift', N'assets/images/planet6.png', N'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 0, 0, 0, 3)
+GO
+INSERT [dbo].[Planets] ([PlanetId], [Name], [ImagePath], [Description], [RobotsOnSite], [IsExplored], [IsLifeSuitable], [StatusId]) VALUES (1015, N'Emerald Expanse', N'assets/images/planet7.png', N'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 6, 1, 1, 1)
+GO
+SET IDENTITY_INSERT [dbo].[Planets] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Expeditions] ON 
+GO
+INSERT [dbo].[Expeditions] ([ExpeditionId], [StartDate], [EndDate], [PlanetId], [TeamId]) VALUES (11, CAST(N'2024-01-01T00:00:00.0000000' AS DateTime2), CAST(N'2025-01-01T00:00:00.0000000' AS DateTime2), 1009, 1)
+GO
+INSERT [dbo].[Expeditions] ([ExpeditionId], [StartDate], [EndDate], [PlanetId], [TeamId]) VALUES (12, CAST(N'2022-01-03T00:00:00.0000000' AS DateTime2), CAST(N'2023-07-05T00:00:00.0000000' AS DateTime2), 1010, 2)
+GO
+INSERT [dbo].[Expeditions] ([ExpeditionId], [StartDate], [EndDate], [PlanetId], [TeamId]) VALUES (13, CAST(N'2020-01-03T00:00:00.0000000' AS DateTime2), CAST(N'2023-07-05T00:00:00.0000000' AS DateTime2), 1011, 3)
+GO
+INSERT [dbo].[Expeditions] ([ExpeditionId], [StartDate], [EndDate], [PlanetId], [TeamId]) VALUES (14, CAST(N'2022-01-03T00:00:00.0000000' AS DateTime2), CAST(N'2023-01-02T00:00:00.0000000' AS DateTime2), 1012, 4)
+GO
+INSERT [dbo].[Expeditions] ([ExpeditionId], [StartDate], [EndDate], [PlanetId], [TeamId]) VALUES (15, CAST(N'2022-01-03T00:00:00.0000000' AS DateTime2), CAST(N'2027-01-02T00:00:00.0000000' AS DateTime2), 1013, 5)
+GO
+INSERT [dbo].[Expeditions] ([ExpeditionId], [StartDate], [EndDate], [PlanetId], [TeamId]) VALUES (16, CAST(N'2023-02-03T00:00:00.0000000' AS DateTime2), CAST(N'2025-01-01T00:00:00.0000000' AS DateTime2), 1014, 2)
+GO
+INSERT [dbo].[Expeditions] ([ExpeditionId], [StartDate], [EndDate], [PlanetId], [TeamId]) VALUES (17, CAST(N'2021-01-03T00:00:00.0000000' AS DateTime2), CAST(N'2022-07-05T00:00:00.0000000' AS DateTime2), 1015, 3)
+GO
+SET IDENTITY_INSERT [dbo].[Expeditions] OFF
+GO
+INSERT [dbo].[RobotTeams] ([TeamId], [RobotId], [ExpeditionId]) VALUES (1, 1, 11)
+GO
+INSERT [dbo].[RobotTeams] ([TeamId], [RobotId], [ExpeditionId]) VALUES (1, 2, 11)
+GO
+INSERT [dbo].[RobotTeams] ([TeamId], [RobotId], [ExpeditionId]) VALUES (1, 3, 11)
+GO
+INSERT [dbo].[RobotTeams] ([TeamId], [RobotId], [ExpeditionId]) VALUES (2, 4, 12)
+GO
+INSERT [dbo].[RobotTeams] ([TeamId], [RobotId], [ExpeditionId]) VALUES (2, 5, 12)
+GO
+INSERT [dbo].[RobotTeams] ([TeamId], [RobotId], [ExpeditionId]) VALUES (3, 6, 13)
+GO
+INSERT [dbo].[RobotTeams] ([TeamId], [RobotId], [ExpeditionId]) VALUES (3, 7, 13)
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20250303183015_InitialCreate', N'9.0.2')
+GO
