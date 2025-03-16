@@ -5,18 +5,18 @@ using space_colonization_api.Repositories.Planets;
 
 namespace space_colonization_api.Business.Planets.Handlers
 {
-    public class GetPlanetsHandler : IRequestHandler<GetPlanetsQuery, IReadOnlyList<GetPlanetsResponse>>
+    public class GetPlanetByIdHandler : IRequestHandler<GetPlanetByIdQuery, GetPlanetByIdResponse>
     {
         public readonly IPlanetRepository _planetRepository;
 
-        public GetPlanetsHandler(IPlanetRepository planetRepository)
+        public GetPlanetByIdHandler(IPlanetRepository planetRepository)
         {
             _planetRepository = planetRepository;
         }
 
-        public async Task<IReadOnlyList<GetPlanetsResponse>> Handle(GetPlanetsQuery request, CancellationToken cancellationToken)
+        public async Task<GetPlanetByIdResponse> Handle(GetPlanetByIdQuery query, CancellationToken cancellationToken)
         {
-            return await _planetRepository.GetAll(cancellationToken);
+            return await _planetRepository.GetById(query, cancellationToken);
         }
     }
 }

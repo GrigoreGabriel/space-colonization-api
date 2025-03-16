@@ -9,6 +9,9 @@
         public int RobotsOnSite { get; set; }
         public bool IsExplored { get; set; }
         public bool IsLifeSuitable { get; set; }
+        public string CaptainName { get; set; } = string.Empty;
+        public IEnumerable<string> Robots { get; set; } = new List<string>();
+        public int StatusId { get; set; }
         public string StatusName { get; set; } = string.Empty;
     }
 }

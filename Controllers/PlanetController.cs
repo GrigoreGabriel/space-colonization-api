@@ -24,12 +24,31 @@ namespace space_colonization_api.Controllers
             var query = await _mediator.Send(new GetPlanetsQuery());
             return Ok(query);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var query = await _mediator.Send(new GetPlanetByIdQuery(id));
+            if (query is null)
+            {
+                return NotFound();
+            }
+            return Ok(query);
+        }
+
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePlanetDetails(int id, [FromBody] UpdatePlanetDetailsRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> Update(int id, [FromBody] UpdatePlanetDetailsRequest request, CancellationToken cancellationToken)
         {
             var result = await _mediator.Send(new UpdatePlanetDetailsCommand(id, request.Description, request.StatusId), cancellationToken);
-
             return result;
+        }
+
+        [HttpGet("statuses")]
+        public async Task<ActionResult<IReadOnlyList<GetPlanetStatusResponse>>> GetStatuses()
+        {
+            var query = await _mediator.Send(new GetPlanetStatusQuery());
+
+            return Ok(query);
         }
     }
 }
